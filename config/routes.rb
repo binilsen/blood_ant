@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  scope :v1 do
+  scope 'api/v1' do
     post 'sign_in', to: 'sessions#create'
     post 'sign_up', to: 'registrations#create'
     resources :sessions, only: %i[index show destroy]
@@ -12,11 +12,13 @@ Rails.application.routes.draw do
       resource :password_reset,     only: %i[new edit create update]
     end
   end
-  namespace :v1 do
-    resources :logs do
-      get :filters, on: :collection
+  namespace :api do
+    namespace :v1 do
+      resources :logs do
+        get :filters, on: :collection
+      end
+      resources :profile
     end
-    resources :profile
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
