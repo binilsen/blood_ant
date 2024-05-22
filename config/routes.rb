@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :logs do
         get :filters, on: :collection
+        get :active, on: :collection
       end
       resources :profile
     end

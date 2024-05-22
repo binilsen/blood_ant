@@ -5,10 +5,24 @@ class LogQuery < ApplicationQuery
     @records = by_tag if params[:tag].present?
     @records = by_result  if params[:result].present?
     @records = by_session if params[:session].present?
-    @records
+    @records = by_month if params[:month].present?
+    @records = by_dates if params[:start_date].present? && params[:end_date].present?
+    @records.order(created_at: :desc)
   end
 
   private
+
+  def by_month
+    start_date = Time.zone.today - Integer(params[:month], 10).months
+    end_date = Time.zone.today
+    @records = @records.where(created_at: start_date...end_date).order(:created_at)
+  end
+
+  def by_dates
+    start_date = Date.new(params[:start_date])
+    end_date = Date.new(params[:end_date])
+    @records = @records.where(created_at: start_date...end_date).order(:created_at)
+  end
 
   def by_tag
     @records = @records.bookmark if params[:tag] == 'bookmark'

@@ -8,4 +8,6 @@ class Log < ApplicationRecord
                   early: 6 }
   enum tag: { default: 0, bookmark: 1 }
   enum result: { normal: 0, low: 1, high: 2 }
+
+  scope :active, -> { where(created_at: Time.zone.today.all_day) }
 end
