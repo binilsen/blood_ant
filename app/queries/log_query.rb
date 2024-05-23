@@ -15,13 +15,13 @@ class LogQuery < ApplicationQuery
   def by_month
     start_date = Time.zone.today - Integer(params[:month], 10).months
     end_date = Time.zone.today
-    @records = @records.where(created_at: start_date...end_date).order(:created_at)
+    @records = @records.where(created_at: start_date...end_date)
   end
 
   def by_dates
     start_date = Date.new(params[:start_date])
     end_date = Date.new(params[:end_date])
-    @records = @records.where(created_at: start_date...end_date).order(:created_at)
+    @records = @records.where(created_at: start_date...end_date)
   end
 
   def by_tag
