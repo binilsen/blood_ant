@@ -10,8 +10,8 @@ module Api
       # GET /logs
       def index
         @logs = Current.user.logs.all
-
-        render json: paginate(LogQuery.perform(@logs, params))
+        @logs = LogQuery.perform(@logs, params)
+        render json: params[:all].present? ? @logs : paginate(@logs)
       end
 
       # GET /logs/1
@@ -46,6 +46,10 @@ module Api
 
       def filters
         render json: available_filters
+      end
+
+      def active
+        render json: Current.user.logs.active
       end
 
       private
