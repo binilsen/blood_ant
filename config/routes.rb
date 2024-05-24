@@ -19,7 +19,11 @@ Rails.application.routes.draw do
         get :active, on: :collection
         post :generate_report, on: :collection
       end
-      resources :profile
+
+      resources :profile do
+        get :active_dose, on: :collection
+      end
+      resources :doses
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

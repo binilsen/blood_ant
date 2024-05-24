@@ -6,6 +6,10 @@ module Api
       def index
         render json: { user: Current.user, session: Current.session }
       end
+
+      def active_dose
+        render json: Current.user.doses.active.first
+      end
     end
   end
 end

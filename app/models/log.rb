@@ -3,6 +3,7 @@
 class Log < ApplicationRecord
   include Evaluatable
   belongs_to :user
+  belongs_to :dose, optional: true
 
   enum session: { immediate: 0, fasting: 1, morning: 2, afternoon: 3, evening: 4, night: 5,
                   early: 6 }
@@ -13,7 +14,15 @@ class Log < ApplicationRecord
 
   scope :active, -> { where(created_at: Time.zone.today.all_day) }
 
+  before_create :enable_log_dose
+
   private
+
+  def enable_log_dose
+    return if user.doses.active.blank?
+
+    self.dose_id = user.doses.active.first.id
+  end
 
   def log_entry
     errors.add(:base, 'Log exist!') if user.logs.active.where(session:).present?
