@@ -15,6 +15,6 @@ class Dose < ApplicationRecord
   end
 
   def enable_default_dose
-    user.doses.last.active! if user.doses.active.blank?
+    user.doses.last.active! if user.active_dose.blank?
   end
 end
