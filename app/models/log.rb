@@ -19,9 +19,9 @@ class Log < ApplicationRecord
   private
 
   def enable_log_dose
-    return if user.doses.active.blank?
+    return if user.active_dose.blank?
 
-    self.dose_id = user.doses.active.first.id
+    self.dose_id = user.active_dose.id
   end
 
   def log_entry

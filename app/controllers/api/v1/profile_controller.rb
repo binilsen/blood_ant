@@ -8,7 +8,7 @@ module Api
       end
 
       def active_dose
-        render json: Current.user.doses.active.first
+        render json: Current.user.active_dose
       end
     end
   end
