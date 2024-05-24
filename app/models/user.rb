@@ -32,6 +32,10 @@ class User < ApplicationRecord
 
   after_create :create_initial_dose
 
+  def active_dose
+    doses.active.first
+  end
+
   private
 
   def create_initial_dose
