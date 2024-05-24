@@ -9,5 +9,13 @@ class Log < ApplicationRecord
   enum tag: { default: 0, bookmark: 1 }
   enum result: { normal: 0, low: 1, high: 2 }
 
+  validate :log_entry, unless: :immediate?
+
   scope :active, -> { where(created_at: Time.zone.today.all_day) }
+
+  private
+
+  def log_entry
+    errors.add(:base, 'Log exist!') if user.logs.active.where(session:).present?
+  end
 end

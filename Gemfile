@@ -60,3 +60,5 @@ gem 'ulid', '~> 1.4'
 gem 'goldiloader', '~> 5.2'
 
 gem 'pagy', '~> 8.4'
+
+gem 'sucker_punch'

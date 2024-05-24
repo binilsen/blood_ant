@@ -26,7 +26,7 @@ module Api
         if @log.save
           render json: @log, status: :created
         else
-          render json: @log.errors, status: :unprocessable_entity
+          render json: @log.errors.full_messages, status: :unprocessable_entity
         end
       end
 
@@ -35,7 +35,7 @@ module Api
         if @log.update(log_params)
           render json: @log
         else
-          render json: @log.errors, status: :unprocessable_entity
+          render json: @log.errors.full_messages, status: :unprocessable_entity
         end
       end
 
@@ -50,6 +50,11 @@ module Api
 
       def active
         render json: Current.user.logs.active
+      end
+
+      def generate_report
+        LogReportJob.perform_now(Current.user.id, params)
+        render json: 'Report Send!', status: :ok
       end
 
       private
