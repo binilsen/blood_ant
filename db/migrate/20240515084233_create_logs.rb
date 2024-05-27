@@ -9,6 +9,7 @@ class CreateLogs < ActiveRecord::Migration[7.1]
       t.integer :tag, default: 0
       t.integer :result, default: 0
 
+      t.belongs_to :dose
       t.belongs_to :user
       t.timestamps
     end

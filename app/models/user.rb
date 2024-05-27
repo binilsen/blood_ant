@@ -14,6 +14,7 @@ class User < ApplicationRecord
 
   has_many :sessions, dependent: :destroy
   has_many :logs, dependent: :destroy
+  has_many :doses, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :name, presence: true
@@ -27,5 +28,17 @@ class User < ApplicationRecord
 
   after_update if: :password_digest_previously_changed? do
     sessions.where.not(id: Current.session).delete_all
+  end
+
+  after_create :create_initial_dose
+
+  def active_dose
+    doses.active.first
+  end
+
+  private
+
+  def create_initial_dose
+    doses.create!(status: 'active')
   end
 end
