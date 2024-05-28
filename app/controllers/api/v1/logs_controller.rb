@@ -4,12 +4,11 @@ module Api
   module V1
     class LogsController < ApplicationController
       include Paginatable
+      before_action :set_logs
       before_action :set_log, only: %i[show update destroy]
-      skip_before_action :authenticate, only: :filters
 
       # GET /logs
       def index
-        @logs = Current.user.logs.all
         @logs = LogQuery.perform(@logs, params)
         render json: params[:all].present? ? @logs : paginate(@logs)
       end
@@ -21,7 +20,7 @@ module Api
 
       # POST /logs
       def create
-        @log = Current.user.logs.new(log_params)
+        @log = @logs.new(log_params)
 
         if @log.save
           render json: @log, status: :created
@@ -49,11 +48,11 @@ module Api
       end
 
       def active
-        render json: Current.user.logs.active
+        render json: @logs.active
       end
 
       def generate_report
-        LogReportJob.perform_now(Current.user.id, params)
+        LogReportJob.perform_now(current_account.id, params)
         render json: 'Report Send!', status: :ok
       end
 
@@ -65,7 +64,11 @@ module Api
 
       # Use callbacks to share common setup or constraints between actions.
       def set_log
-        @log = Current.user.logs.find(params[:id])
+        @log = @logs.find(params[:id])
+      end
+
+      def set_logs
+        @logs = current_account.logs
       end
 
       # Only allow a list of trusted parameters through.

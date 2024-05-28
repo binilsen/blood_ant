@@ -11,7 +11,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins '*'
     resource '*',
-             expose: %i[x-session-token total-count total-page page-items current-page],
+             expose: %i[authorization total-count total-page page-items current-page],
              headers: :any,
              methods: %i[get post put patch delete options head]
   end
