@@ -8,7 +8,7 @@ class RodauthMain < Rodauth::Rails::Auth
     enable :create_account, :verify_account, :verify_account_grace_period,
            :login, :logout, :jwt, :active_sessions,
            :reset_password, :change_password, :change_password_notify,
-           :change_login, :verify_login_change, :close_account
+           :change_login, :verify_login_change, :close_account, :email_auth
 
     # See the Rodauth documentation for the list of available config options:
     # http://rodauth.jeremyevans.net/documentation.html
@@ -27,6 +27,9 @@ class RodauthMain < Rodauth::Rails::Auth
     reset_password_table :user_password_reset_keys
     active_sessions_table :user_active_session_keys
     active_sessions_account_id_column :user_id
+    email_auth_table :user_email_auth_keys
+    email_auth_skip_resend_email_within 30
+
     # The secret key used for hashing public-facing tokens for various features.
     # Defaults to Rails `secret_key_base`, but you can use your own secret key.
     # hmac_secret "d64100a8b66e41d79b7077419e606143713a0029ab8344f1817457b68cff6852baef24ceb058cbcb60823d8efe621f5609f2a07ec1a6e7dfa74ed3d9059dfdfc"
@@ -94,9 +97,9 @@ class RodauthMain < Rodauth::Rails::Auth
     # create_reset_password_notify_email do
     #   RodauthMailer.reset_password_notify(self.class.configuration_name, account_id)
     # end
-    # create_email_auth_email do
-    #   RodauthMailer.email_auth(self.class.configuration_name, account_id, email_auth_key_value)
-    # end
+    create_email_auth_email do
+      RodauthMailer.email_auth(self.class.configuration_name, account_id, email_auth_key_value)
+    end
     # create_unlock_account_email do
     #   RodauthMailer.unlock_account(self.class.configuration_name, account_id, unlock_account_key_value)
     # end
@@ -138,6 +141,7 @@ class RodauthMain < Rodauth::Rails::Auth
     # ==> Hooks
     # Validate custom fields in the create account form.
     before_create_account do
+      account[:ulid] = ULID.generate
       account[:name] = param('name')
       account[:dob] = param('dob') if param('dob').present?
       account[:gender] = param('gender') if param('gender').present?
@@ -163,5 +167,9 @@ class RodauthMain < Rodauth::Rails::Auth
 
   def verify_account_email_token
     token_param_value(verify_account_key_value)
+  end
+
+  def email_auth_account_email_token
+    token_param_value(email_auth_key_value)
   end
 end

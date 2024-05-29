@@ -2,7 +2,6 @@
 
 class User < ApplicationRecord
   include Rodauth::Rails.model
-  include Identifiable
 
   enum :status, unverified: 1, verified: 2, closed: 3
   enum category: { one: 0, two: 1 }
@@ -17,8 +16,4 @@ class User < ApplicationRecord
   def active_dose
     doses.active.first
   end
-
-  private
-
-  def create_initial_dose; end
 end

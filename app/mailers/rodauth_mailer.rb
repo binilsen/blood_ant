@@ -40,12 +40,13 @@ class RodauthMailer < ApplicationMailer
   #   mail subject: @rodauth.email_subject_prefix + @rodauth.reset_password_notify_email_subject
   # end
 
-  # def email_auth(name, account_id, key)
-  #   @rodauth = rodauth(name, account_id) { @email_auth_key_value = key }
-  #   @account = @rodauth.rails_account
+  def email_auth(name, account_id, key)
+    @rodauth = rodauth(name, account_id) { @email_auth_key_value = key }
+    @account = @rodauth.rails_account
+    @email_link = "http://localhost:5173/email-auth?key=#{@rodauth.email_auth_account_email_token}"
 
-  #   mail subject: @rodauth.email_subject_prefix + @rodauth.email_auth_email_subject
-  # end
+    mail subject: @rodauth.email_subject_prefix + @rodauth.email_auth_email_subject
+  end
 
   # def unlock_account(name, account_id, key)
   #   @rodauth = rodauth(name, account_id) { @unlock_account_key_value = key }

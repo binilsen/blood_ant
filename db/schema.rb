@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_527_113_826) do
+ActiveRecord::Schema[7.1].define(version: 20_240_529_120_908) do
   create_table 'doses', force: :cascade do |t|
     t.integer 'user_id'
     t.integer 'morning', default: 0
@@ -49,6 +49,12 @@ ActiveRecord::Schema[7.1].define(version: 20_240_527_113_826) do
     t.index ['user_id'], name: 'index_user_active_session_keys_on_user_id'
   end
 
+  create_table 'user_email_auth_keys', force: :cascade do |t|
+    t.string 'key', null: false
+    t.datetime 'deadline', null: false
+    t.datetime 'email_last_sent', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+  end
+
   create_table 'user_login_change_keys', force: :cascade do |t|
     t.string 'key', null: false
     t.string 'login', null: false
@@ -81,6 +87,7 @@ ActiveRecord::Schema[7.1].define(version: 20_240_527_113_826) do
   end
 
   add_foreign_key 'user_active_session_keys', 'users'
+  add_foreign_key 'user_email_auth_keys', 'users', column: 'id'
   add_foreign_key 'user_login_change_keys', 'users', column: 'id'
   add_foreign_key 'user_password_reset_keys', 'users', column: 'id'
   add_foreign_key 'user_verification_keys', 'users', column: 'id'
