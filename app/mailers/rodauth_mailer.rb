@@ -43,7 +43,7 @@ class RodauthMailer < ApplicationMailer
   def email_auth(name, account_id, key)
     @rodauth = rodauth(name, account_id) { @email_auth_key_value = key }
     @account = @rodauth.rails_account
-    @email_link = "http://localhost:5173/email-auth?key=#{@rodauth.email_auth_account_email_token}"
+    @email_link = "http://localhost:5173/auth?key=#{@rodauth.email_auth_account_email_token}"
 
     mail subject: @rodauth.email_subject_prefix + @rodauth.email_auth_email_subject
   end
