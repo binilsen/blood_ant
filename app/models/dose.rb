@@ -11,7 +11,7 @@ class Dose < ApplicationRecord
   private
 
   def validate_active_doses
-    user.doses.active.update(status: 'inactive') if active? && user.active_dose.id != id
+    user.doses.active.update(status: 'inactive') if active? && id.present?
   end
 
   def enable_default_dose

@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_524_051_538) do
+ActiveRecord::Schema[7.1].define(version: 20_240_529_120_908) do
   create_table 'doses', force: :cascade do |t|
     t.integer 'user_id'
     t.integer 'morning', default: 0
@@ -41,29 +41,54 @@ ActiveRecord::Schema[7.1].define(version: 20_240_524_051_538) do
     t.index ['user_id'], name: 'index_logs_on_user_id'
   end
 
-  create_table 'sessions', force: :cascade do |t|
-    t.integer 'user_id', null: false
-    t.string 'user_agent'
-    t.string 'ip_address'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['user_id'], name: 'index_sessions_on_user_id'
+  create_table 'user_active_session_keys', primary_key: %w[user_id session_id], force: :cascade do |t|
+    t.integer 'user_id'
+    t.string 'session_id'
+    t.datetime 'created_at', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+    t.datetime 'last_use', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+    t.index ['user_id'], name: 'index_user_active_session_keys_on_user_id'
+  end
+
+  create_table 'user_email_auth_keys', force: :cascade do |t|
+    t.string 'key', null: false
+    t.datetime 'deadline', null: false
+    t.datetime 'email_last_sent', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+  end
+
+  create_table 'user_login_change_keys', force: :cascade do |t|
+    t.string 'key', null: false
+    t.string 'login', null: false
+    t.datetime 'deadline', null: false
+  end
+
+  create_table 'user_password_reset_keys', force: :cascade do |t|
+    t.string 'key', null: false
+    t.datetime 'deadline', null: false
+    t.datetime 'email_last_sent', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+  end
+
+  create_table 'user_verification_keys', force: :cascade do |t|
+    t.string 'key', null: false
+    t.datetime 'requested_at', default: -> { 'CURRENT_TIMESTAMP' }, null: false
+    t.datetime 'email_last_sent', default: -> { 'CURRENT_TIMESTAMP' }, null: false
   end
 
   create_table 'users', force: :cascade do |t|
+    t.integer 'status', default: 1, null: false
     t.string 'email', null: false
-    t.string 'password_digest', null: false
+    t.string 'password_hash'
     t.string 'name'
     t.date 'dob'
     t.integer 'category', default: 0
     t.integer 'gender', default: 0
     t.string 'ulid'
-    t.boolean 'verified', default: false, null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['email'], name: 'index_users_on_email', unique: true, where: 'status IN (1, 2)'
     t.index ['ulid'], name: 'index_users_on_ulid'
   end
 
-  add_foreign_key 'sessions', 'users'
+  add_foreign_key 'user_active_session_keys', 'users'
+  add_foreign_key 'user_email_auth_keys', 'users', column: 'id'
+  add_foreign_key 'user_login_change_keys', 'users', column: 'id'
+  add_foreign_key 'user_password_reset_keys', 'users', column: 'id'
+  add_foreign_key 'user_verification_keys', 'users', column: 'id'
 end
