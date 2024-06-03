@@ -20,23 +20,15 @@
 #
 #  index_doses_on_user_id  (user_id)
 #
-class Dose < ApplicationRecord
-  enum status: { inactive: 0, active: 1 }
-  belongs_to :user
-  has_many :logs, dependent: :nullify
-
-  validates :evening, :morning, :afternoon, :night, numericality: { greater_than: 0, less_than: 150 }
-
-  before_save :validate_active_doses
-  after_save :enable_default_dose
-
-  private
-
-  def validate_active_doses
-    user.doses.active.update(status: 'inactive') if active? && id.present?
-  end
-
-  def enable_default_dose
-    user.doses.last.active! if user.active_dose.blank?
+FactoryBot.define do
+  factory :dose do
+    afternoon { Faker::Number.between(from: 4, to: 50) }
+    evening  { Faker::Number.between(from: 4, to: 50) }
+    medicine { Faker::Lorem.sentence }
+    morning { Faker::Number.between(from: 4, to: 50) }
+    night { Faker::Number.between(from: 4, to: 50) }
+    remarks { Faker::Lorem.sentence }
+    status { Dose.statuses.keys.sample }
+    user
   end
 end
