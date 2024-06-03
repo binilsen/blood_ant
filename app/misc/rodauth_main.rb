@@ -32,7 +32,7 @@ class RodauthMain < Rodauth::Rails::Auth
 
     # The secret key used for hashing public-facing tokens for various features.
     # Defaults to Rails `secret_key_base`, but you can use your own secret key.
-    # hmac_secret "d64100a8b66e41d79b7077419e606143713a0029ab8344f1817457b68cff6852baef24ceb058cbcb60823d8efe621f5609f2a07ec1a6e7dfa74ed3d9059dfdfc"
+    hmac_secret Rails.env.test? ? 'test' : Rails.application.credentials.secret_key_base
 
     # Set JWT secret, which is used to cryptographically protect the token.
     jwt_secret { hmac_secret }

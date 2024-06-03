@@ -39,15 +39,22 @@ gem 'rack-cors'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner-active_record', group: :test
   gem 'debug', platforms: %i[mri windows]
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry'
+  gem 'rspec-rails'
   gem 'rubocop'
+  gem 'rubocop-factory_bot', require: false
   gem 'rubocop-rails'
+  gem 'simplecov', require: false, group: :test
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'annotate'
   gem 'letter_opener', '~> 1.10'
 end
 

@@ -19,19 +19,14 @@
 #  index_users_on_email  (email) UNIQUE WHERE status IN (1, 2)
 #  index_users_on_ulid   (ulid)
 #
-class User < ApplicationRecord
-  include Rodauth::Rails.model
-
-  enum :status, unverified: 1, verified: 2, closed: 3
-  enum category: { one: 0, two: 1 }
-  enum gender: { male: 0, female: 1, other: 2 }
-
-  has_many :logs, dependent: :destroy
-  has_many :doses, dependent: :destroy
-
-  validates :name, presence: true
-
-  def active_dose
-    doses.active.first
+FactoryBot.define do
+  factory :user do
+    category { User.categories.keys.sample }
+    dob { Faker::Date.between(from: 20.years.ago, to: 15.years.ago) }
+    email { Faker::Internet.email }
+    gender { User.genders.keys.sample }
+    name { Faker::Name.name }
+    password { 'test1234' }
+    status { 'verified' }
   end
 end
