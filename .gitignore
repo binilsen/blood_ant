@@ -34,3 +34,5 @@
 
 .rbenv-gemsets
 coverage
+
+node_modules
