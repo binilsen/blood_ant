@@ -31,6 +31,7 @@ class Log < ApplicationRecord
   enum result: { normal: 0, low: 1, high: 2 }
 
   validate :log_entry, unless: :immediate?
+  validates :value, numericality: { greater_than: 50, less_than: 1000 }
 
   scope :active, -> { where(created_at: Time.zone.today.all_day) }
 

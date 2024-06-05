@@ -72,3 +72,5 @@ gem 'sucker_punch'
 gem 'rodauth-rails', '~> 1.14'
 
 gem 'jwt', '~> 2.8'
+
+gem 'rspec-openapi', group: :test
