@@ -27,6 +27,7 @@ require 'simplecov'
 #
 Rails.root.glob('spec/support/**/*.rb').sort.each { |f| require f }
 SimpleCov.start
+RSpec::OpenAPI.path = 'docs/openapi.yaml'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.

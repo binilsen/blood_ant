@@ -57,59 +57,59 @@ paths:
               example:
               - id: 1
                 user_id: 1
-                morning: 25
-                afternoon: 27
-                evening: 16
-                night: 7
-                medicine: Iure ad neque magnam.
-                remarks: Facilis reiciendis porro ducimus.
-                status: active
-                created_at: '2024-06-05T05:03:01.323Z'
-                updated_at: '2024-06-05T05:03:01.323Z'
-              - id: 5
-                user_id: 1
-                morning: 14
-                afternoon: 27
+                morning: 46
+                afternoon: 49
                 evening: 35
-                night: 37
-                medicine: Omnis tempora repellendus vel.
-                remarks: Sequi repudiandae earum enim.
+                night: 22
+                medicine: Asperiores repudiandae aut quidem.
+                remarks: Tempore ut ut sapiente.
                 status: active
-                created_at: '2024-06-05T05:03:01.335Z'
-                updated_at: '2024-06-05T05:03:01.335Z'
+                created_at: '2024-06-05T05:45:02.111Z'
+                updated_at: '2024-06-05T05:45:02.114Z'
               - id: 2
                 user_id: 1
-                morning: 37
-                afternoon: 47
-                evening: 8
-                night: 13
-                medicine: Saepe eaque incidunt ut.
-                remarks: Perspiciatis quia excepturi voluptatem.
-                status: inactive
-                created_at: '2024-06-05T05:03:01.326Z'
-                updated_at: '2024-06-05T05:03:01.326Z'
+                morning: 34
+                afternoon: 43
+                evening: 29
+                night: 22
+                medicine: Quam eos eum corporis.
+                remarks: Sed commodi iste enim.
+                status: active
+                created_at: '2024-06-05T05:45:02.116Z'
+                updated_at: '2024-06-05T05:45:02.116Z'
               - id: 3
                 user_id: 1
-                morning: 27
-                afternoon: 23
-                evening: 25
-                night: 15
-                medicine: Quis optio minima molestiae.
-                remarks: Cum nihil libero repellat.
-                status: inactive
-                created_at: '2024-06-05T05:03:01.328Z'
-                updated_at: '2024-06-05T05:03:01.328Z'
+                morning: 48
+                afternoon: 40
+                evening: 22
+                night: 14
+                medicine: Placeat eaque ipsum reprehenderit.
+                remarks: Similique aperiam harum minima.
+                status: active
+                created_at: '2024-06-05T05:45:02.119Z'
+                updated_at: '2024-06-05T05:45:02.119Z'
               - id: 4
                 user_id: 1
-                morning: 19
-                afternoon: 42
-                evening: 18
-                night: 32
-                medicine: Est aut est quo.
-                remarks: Itaque aut sit nulla.
+                morning: 20
+                afternoon: 48
+                evening: 27
+                night: 48
+                medicine: Aperiam praesentium dignissimos ab.
+                remarks: Illo mollitia vel aspernatur.
                 status: inactive
-                created_at: '2024-06-05T05:03:01.332Z'
-                updated_at: '2024-06-05T05:03:01.332Z'
+                created_at: '2024-06-05T05:45:02.121Z'
+                updated_at: '2024-06-05T05:45:02.121Z'
+              - id: 5
+                user_id: 1
+                morning: 49
+                afternoon: 14
+                evening: 31
+                night: 4
+                medicine: Earum a minus ipsam.
+                remarks: Enim voluptatem alias minus.
+                status: inactive
+                created_at: '2024-06-05T05:45:02.123Z'
+                updated_at: '2024-06-05T05:45:02.123Z'
     post:
       summary: create
       tags:
@@ -143,16 +143,16 @@ paths:
               - remarks
               - status
             example:
-              afternoon: 7
-              evening: 43
-              medicine: Exercitationem est nesciunt blanditiis.
-              morning: 31
-              night: 36
-              remarks: Ab voluptas minima in.
+              afternoon: 13
+              evening: 26
+              medicine: Aperiam debitis repellendus iure.
+              morning: 8
+              night: 45
+              remarks: Qui labore quia voluptatem.
               status: inactive
       responses:
         '201':
-          description: is expected to eq 31
+          description: is expected to eq 8
           content:
             application/json:
               schema:
@@ -195,15 +195,15 @@ paths:
               example:
                 id: 1
                 user_id: 1
-                morning: 31
-                afternoon: 7
-                evening: 43
-                night: 36
-                medicine: Exercitationem est nesciunt blanditiis.
-                remarks: Ab voluptas minima in.
+                morning: 8
+                afternoon: 13
+                evening: 26
+                night: 45
+                medicine: Aperiam debitis repellendus iure.
+                remarks: Qui labore quia voluptatem.
                 status: inactive
-                created_at: '2024-06-05T05:03:01.437Z'
-                updated_at: '2024-06-05T05:03:01.437Z'
+                created_at: '2024-06-05T05:45:02.222Z'
+                updated_at: '2024-06-05T05:45:02.222Z'
         '422':
           description: is expected to eq 422
           content:
@@ -313,1210 +313,1210 @@ paths:
                   ''id''=1 [WHERE "doses"."user_id" = ?]>'
                 traces:
                   Application Trace:
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 6
                     trace: app/controllers/api/v1/doses_controller.rb:49:in `set_dose'
                   Framework Trace:
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 0
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:416:in
                       `raise_record_not_found_exception!'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 1
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:522:in
                       `find_one'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 2
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:499:in
                       `find_with_ids'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 3
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:92:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 4
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_association.rb:111:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 5
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_proxy.rb:140:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 7
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:403:in
                       `block in make_lambda'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 8
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:183:in
                       `block (2 levels) in halting_and_conditional'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 9
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:34:in
                       `block (2 levels) in <module:Callbacks>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 10
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:184:in
                       `block in halting_and_conditional'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 11
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `block in invoke_before'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 12
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 13
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `invoke_before'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 14
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in
                       `run_callbacks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 15
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 16
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 17
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in
                       `block in process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 18
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `block in instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 19
                     trace: activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in
                       `instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 20
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 21
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 22
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 23
                     trace: activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 24
                     trace: actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in
                       `process'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 25
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 26
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 27
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 28
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 29
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:21:in
                       `block in <class:Constraints>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 30
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:51:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 31
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in
                       `block in serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 32
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in
                       `block in find_routes'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 33
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 34
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `find_routes'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 35
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 36
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 37
                     trace: roda (3.80.0) lib/roda/plugins/middleware.rb:164:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 38
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:18:in
                       `block in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 39
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `catch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 40
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 41
                     trace: rack (3.0.11) lib/rack/etag.rb:29:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 42
                     trace: rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 43
                     trace: rack (3.0.11) lib/rack/head.rb:15:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 44
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in
                       `block in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 45
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in
                       `run_callbacks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 46
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 47
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 48
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 49
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 50
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 51
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block
                       in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 52
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `block in tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 53
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in
                       `tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 54
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 55
                     trace: activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in
                       `method_missing'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 56
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 57
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 58
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 59
                     trace: rack (3.0.11) lib/rack/runtime.rb:24:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 60
                     trace: activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 61
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 62
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 63
                     trace: rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 64
                     trace: rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 65
                     trace: railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 66
                     trace: rack-test (2.1.0) lib/rack/test.rb:360:in `process_request'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 67
                     trace: rack-test (2.1.0) lib/rack/test.rb:153:in `request'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 68
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:288:in
                       `process'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 69
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:40:in
                       `delete'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 70
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:379:in
                       `delete'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 71
                     trace: spec/requests/api/v1/doses_spec.rb:68:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 72
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block (2 levels) in let'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 73
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (3 levels) in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 74
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `fetch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 75
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (2 levels) in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 76
                     trace: rspec-support (3.13.1) lib/rspec/support/reentrant_mutex.rb:25:in
                       `synchronize'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 77
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:178:in
                       `block in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 78
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 79
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 80
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block in let'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 81
                     trace: spec/requests/api/v1/doses_spec.rb:70:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 82
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 83
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 84
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:365:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 85
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:529:in `block
                       in run_owned_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 86
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 87
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 88
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:615:in `block
                       in run_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 89
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `reverse_each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 90
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 91
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:484:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 92
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:505:in `run_before_example'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 93
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:261:in `block
                       in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 94
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `block
                       in with_around_and_singleton_context_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 95
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `block
                       in with_around_example_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 96
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `block
                       in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 97
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:626:in `block
                       in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 98
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 99
                     trace: rspec-rails (6.1.2) lib/rspec/rails/adapters.rb:75:in `block
                       (2 levels) in <module:MinitestLifecycleAdapter>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 100
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 101
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 102
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 103
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 104
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 105
-                    trace: spec/rails_helper.rb:78:in `block (3 levels) in <top (required)>'
-                  - exception_object_id: 26440
+                    trace: spec/rails_helper.rb:79:in `block (3 levels) in <top (required)>'
+                  - exception_object_id: 26500
                     id: 106
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/strategy.rb:30:in
                       `cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 107
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 108
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:34:in
                       `block (2 levels) in cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 109
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:35:in
                       `cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 110
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 111
-                    trace: spec/rails_helper.rb:77:in `block (2 levels) in <top (required)>'
-                  - exception_object_id: 26440
+                    trace: spec/rails_helper.rb:78:in `block (2 levels) in <top (required)>'
+                  - exception_object_id: 26500
                     id: 112
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 113
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 114
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 115
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 116
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 117
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 118
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 119
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `with_around_example_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 120
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 121
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:259:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 122
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:646:in
                       `block in run_examples'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 123
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 124
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `run_examples'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 125
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:607:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 126
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 127
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 128
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 129
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 130
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 131
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 132
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 133
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 134
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 135
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (3 levels) in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 136
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 137
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (2 levels) in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 138
                     trace: rspec-core (3.13.0) lib/rspec/core/configuration.rb:2091:in
                       `with_suite_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 139
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:116:in `block
                       in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 140
                     trace: rspec-core (3.13.0) lib/rspec/core/reporter.rb:74:in `report'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 141
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:115:in `run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 142
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:89:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 143
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:71:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 144
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:45:in `invoke'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 145
                     trace: rspec-core (3.13.0) exe/rspec:4:in `<top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 146
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 147
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `<top
                       (required)>'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 148
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 149
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `kernel_load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 150
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:23:in
                       `run'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 151
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:451:in
                       `exec'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 152
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in
                       `run'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 153
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in
                       `invoke_command'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 154
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in
                       `dispatch'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 155
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:34:in
                       `dispatch'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 156
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in
                       `start'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 157
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:28:in
                       `start'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 158
                     trace: bundler (2.5.6) exe/bundle:28:in `block in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 159
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/friendly_errors.rb:117:in
                       `with_friendly_errors'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 160
                     trace: bundler (2.5.6) exe/bundle:20:in `<top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 161
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 162
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `<main>'"
                   Full Trace:
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 0
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:416:in
                       `raise_record_not_found_exception!'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 1
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:522:in
                       `find_one'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 2
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:499:in
                       `find_with_ids'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 3
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:92:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 4
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_association.rb:111:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 5
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_proxy.rb:140:in
                       `find'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 6
                     trace: app/controllers/api/v1/doses_controller.rb:49:in `set_dose'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 7
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:403:in
                       `block in make_lambda'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 8
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:183:in
                       `block (2 levels) in halting_and_conditional'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 9
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:34:in
                       `block (2 levels) in <module:Callbacks>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 10
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:184:in
                       `block in halting_and_conditional'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 11
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `block in invoke_before'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 12
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 13
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `invoke_before'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 14
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in
                       `run_callbacks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 15
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 16
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 17
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in
                       `block in process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 18
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `block in instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 19
                     trace: activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in
                       `instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 20
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `instrument'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 21
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 22
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 23
                     trace: activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in
                       `process_action'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 24
                     trace: actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in
                       `process'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 25
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 26
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 27
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in
                       `dispatch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 28
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 29
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:21:in
                       `block in <class:Constraints>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 30
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:51:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 31
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in
                       `block in serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 32
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in
                       `block in find_routes'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 33
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 34
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `find_routes'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 35
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in
                       `serve'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 36
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 37
                     trace: roda (3.80.0) lib/roda/plugins/middleware.rb:164:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 38
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:18:in
                       `block in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 39
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `catch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 40
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 41
                     trace: rack (3.0.11) lib/rack/etag.rb:29:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 42
                     trace: rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 43
                     trace: rack (3.0.11) lib/rack/head.rb:15:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 44
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in
                       `block in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 45
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in
                       `run_callbacks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 46
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 47
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 48
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 49
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 50
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 51
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block
                       in call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 52
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `block in tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 53
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in
                       `tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 54
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `tagged'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 55
                     trace: activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in
                       `method_missing'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 56
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 57
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 58
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 59
                     trace: rack (3.0.11) lib/rack/runtime.rb:24:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 60
                     trace: activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 61
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 62
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in
                       `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 63
                     trace: rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 64
                     trace: rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 65
                     trace: railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 66
                     trace: rack-test (2.1.0) lib/rack/test.rb:360:in `process_request'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 67
                     trace: rack-test (2.1.0) lib/rack/test.rb:153:in `request'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 68
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:288:in
                       `process'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 69
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:40:in
                       `delete'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 70
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:379:in
                       `delete'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 71
                     trace: spec/requests/api/v1/doses_spec.rb:68:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 72
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block (2 levels) in let'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 73
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (3 levels) in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 74
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `fetch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 75
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (2 levels) in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 76
                     trace: rspec-support (3.13.1) lib/rspec/support/reentrant_mutex.rb:25:in
                       `synchronize'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 77
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:178:in
                       `block in fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 78
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 79
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch_or_store'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 80
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block in let'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 81
                     trace: spec/requests/api/v1/doses_spec.rb:70:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 82
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 83
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 84
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:365:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 85
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:529:in `block
                       in run_owned_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 86
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 87
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 88
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:615:in `block
                       in run_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 89
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `reverse_each'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 90
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 91
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:484:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 92
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:505:in `run_before_example'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 93
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:261:in `block
                       in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 94
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `block
                       in with_around_and_singleton_context_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 95
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `block
                       in with_around_example_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 96
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `block
                       in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 97
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:626:in `block
                       in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 98
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 99
                     trace: rspec-rails (6.1.2) lib/rspec/rails/adapters.rb:75:in `block
                       (2 levels) in <module:MinitestLifecycleAdapter>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 100
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 101
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 102
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 103
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 104
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 105
-                    trace: spec/rails_helper.rb:78:in `block (3 levels) in <top (required)>'
-                  - exception_object_id: 26440
+                    trace: spec/rails_helper.rb:79:in `block (3 levels) in <top (required)>'
+                  - exception_object_id: 26500
                     id: 106
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/strategy.rb:30:in
                       `cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 107
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 108
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:34:in
                       `block (2 levels) in cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 109
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:35:in
                       `cleaning'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 110
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 111
-                    trace: spec/rails_helper.rb:77:in `block (2 levels) in <top (required)>'
-                  - exception_object_id: 26440
+                    trace: spec/rails_helper.rb:78:in `block (2 levels) in <top (required)>'
+                  - exception_object_id: 26500
                     id: 112
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 113
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 114
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 115
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 116
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 117
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 118
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 119
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `with_around_example_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 120
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 121
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:259:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 122
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:646:in
                       `block in run_examples'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 123
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 124
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `run_examples'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 125
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:607:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 126
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 127
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 128
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 129
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 130
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 131
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 132
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 133
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 134
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 135
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (3 levels) in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 136
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `map'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 137
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (2 levels) in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 138
                     trace: rspec-core (3.13.0) lib/rspec/core/configuration.rb:2091:in
                       `with_suite_hooks'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 139
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:116:in `block
                       in run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 140
                     trace: rspec-core (3.13.0) lib/rspec/core/reporter.rb:74:in `report'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 141
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:115:in `run_specs'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 142
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:89:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 143
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:71:in `run'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 144
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:45:in `invoke'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 145
                     trace: rspec-core (3.13.0) exe/rspec:4:in `<top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 146
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 147
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `<top
                       (required)>'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 148
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 149
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `kernel_load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 150
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:23:in
                       `run'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 151
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:451:in
                       `exec'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 152
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in
                       `run'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 153
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in
                       `invoke_command'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 154
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in
                       `dispatch'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 155
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:34:in
                       `dispatch'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 156
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in
                       `start'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 157
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:28:in
                       `start'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 158
                     trace: bundler (2.5.6) exe/bundle:28:in `block in <top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 159
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/friendly_errors.rb:117:in
                       `with_friendly_errors'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 160
                     trace: bundler (2.5.6) exe/bundle:20:in `<top (required)>'
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 161
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `load'"
-                  - exception_object_id: 26440
+                  - exception_object_id: 26500
                     id: 162
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `<main>'"
     get:
@@ -1532,7 +1532,7 @@ paths:
         example: 1
       responses:
         '200':
-          description: is expected to eq "Ea sunt nihil ut."
+          description: is expected to eq "Eos ab eligendi aspernatur."
           content:
             application/json:
               schema:
@@ -1575,15 +1575,15 @@ paths:
               example:
                 id: 1
                 user_id: 1
-                morning: 4
-                afternoon: 33
-                evening: 16
-                night: 42
-                medicine: Et quo ea velit.
-                remarks: Ea sunt nihil ut.
+                morning: 48
+                afternoon: 46
+                evening: 18
+                night: 4
+                medicine: Possimus est facere ea.
+                remarks: Eos ab eligendi aspernatur.
                 status: active
-                created_at: '2024-06-05T05:03:01.388Z'
-                updated_at: '2024-06-05T05:03:01.392Z'
+                created_at: '2024-06-05T05:45:02.176Z'
+                updated_at: '2024-06-05T05:45:02.176Z'
     patch:
       summary: update
       tags:
@@ -1625,15 +1625,15 @@ paths:
               - status
             example:
               afternoon: 29
-              evening: 17
-              medicine: Aperiam ullam dolore non.
-              morning: 23
-              night: 9
-              remarks: Explicabo in voluptate aut.
+              evening: 27
+              medicine: Qui sunt aut cum.
+              morning: 15
+              night: 6
+              remarks: Optio ut corrupti mollitia.
               status: inactive
       responses:
         '200':
-          description: is expected to eq 23
+          description: is expected to eq 15
           content:
             application/json:
               schema:
@@ -1675,16 +1675,16 @@ paths:
                 - updated_at
               example:
                 user_id: 1
-                morning: 23
+                morning: 15
                 afternoon: 29
-                evening: 17
-                night: 9
-                medicine: Aperiam ullam dolore non.
+                evening: 27
+                night: 6
+                medicine: Qui sunt aut cum.
                 status: inactive
-                remarks: Explicabo in voluptate aut.
+                remarks: Optio ut corrupti mollitia.
                 id: 1
-                created_at: '2024-06-05T05:03:01.484Z'
-                updated_at: '2024-06-05T05:03:01.492Z'
+                created_at: '2024-06-05T05:45:02.268Z'
+                updated_at: '2024-06-05T05:45:02.276Z'
         '422':
           description: is expected to eq 422
           content:
@@ -1742,56 +1742,56 @@ paths:
                   - created_at
                   - updated_at
               example:
-              - id: 4
-                session: morning
-                value: 181
-                remark: Quo autem qui illum.
-                tag: default
-                result: high
-                dose_id: 4
-                user_id: 1
-                created_at: '2014-11-12T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.818Z'
               - id: 5
-                session: early
-                value: 248
-                remark: Ducimus iste perferendis dolor.
-                tag: bookmark
+                session: night
+                value: 767
+                remark: Nemo ad perferendis quaerat.
+                tag: default
                 result: high
                 dose_id: 5
                 user_id: 1
-                created_at: '2014-11-06T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.831Z'
-              - id: 2
-                session: early
-                value: 464
-                remark: Corporis et neque at.
-                tag: bookmark
-                result: high
-                dose_id: 2
-                user_id: 1
-                created_at: '2014-10-24T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.798Z'
+                created_at: '2014-12-25T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.579Z'
               - id: 3
-                session: afternoon
-                value: 544
-                remark: Id qui sit corporis.
+                session: immediate
+                value: 227
+                remark: Quia quas dolore atque.
                 tag: bookmark
                 result: high
                 dose_id: 3
                 user_id: 1
-                created_at: '2014-10-24T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.808Z'
+                created_at: '2014-12-15T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.561Z'
               - id: 1
-                session: immediate
-                value: 217
-                remark: Atque commodi ullam asperiores.
-                tag: bookmark
+                session: fasting
+                value: 724
+                remark: Sunt voluptate perferendis hic.
+                tag: default
                 result: high
                 dose_id: 1
                 user_id: 1
-                created_at: '2014-10-16T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.785Z'
+                created_at: '2014-12-03T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.540Z'
+              - id: 4
+                session: early
+                value: 501
+                remark: Incidunt doloribus quia id.
+                tag: bookmark
+                result: high
+                dose_id: 4
+                user_id: 1
+                created_at: '2014-10-17T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.572Z'
+              - id: 2
+                session: early
+                value: 162
+                remark: Voluptate ex occaecati nisi.
+                tag: default
+                result: normal
+                dose_id: 2
+                user_id: 1
+                created_at: '2014-10-04T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.549Z'
     post:
       summary: create
       tags:
@@ -1822,15 +1822,15 @@ paths:
               - created_at
               - value
             example:
-              remark: Sunt accusamus pariatur ut.
-              result: low
-              session: fasting
-              tag: bookmark
-              created_at: '2014-11-13'
-              value: 254
+              remark: Est laudantium id officia.
+              result: high
+              session: morning
+              tag: default
+              created_at: '2014-09-23'
+              value: 882
       responses:
         '201':
-          description: is expected to eq "fasting"
+          description: is expected to eq "morning"
           content:
             application/json:
               schema:
@@ -1869,15 +1869,15 @@ paths:
                 - updated_at
               example:
                 id: 1
-                session: fasting
-                value: 254
-                remark: Sunt accusamus pariatur ut.
-                tag: bookmark
+                session: morning
+                value: 882
+                remark: Est laudantium id officia.
+                tag: default
                 result: high
                 dose_id: 
                 user_id: 1
-                created_at: '2024-06-05T05:03:01.928Z'
-                updated_at: '2024-06-05T05:03:01.928Z'
+                created_at: '2024-06-05T05:45:02.677Z'
+                updated_at: '2024-06-05T05:45:02.677Z'
         '422':
           description: is expected to eq 422
           content:
@@ -1936,15 +1936,15 @@ paths:
                   - updated_at
               example:
               - id: 1
-                session: night
-                value: 363
-                remark: Sunt soluta pariatur ducimus.
+                session: evening
+                value: 399
+                remark: Atque exercitationem voluptatem praesentium.
                 tag: bookmark
                 result: high
                 dose_id: 1
                 user_id: 1
                 created_at: '2024-06-05T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:02.271Z'
+                updated_at: '2024-06-05T05:45:03.025Z'
   "/api/v1/logs/filters":
     get:
       summary: filters
@@ -2109,1210 +2109,1210 @@ paths:
                   ''id''=1 [WHERE "logs"."user_id" = ?]>'
                 traces:
                   Application Trace:
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 6
                     trace: app/controllers/api/v1/logs_controller.rb:67:in `set_log'
                   Framework Trace:
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 0
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:416:in
                       `raise_record_not_found_exception!'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 1
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:522:in
                       `find_one'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 2
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:499:in
                       `find_with_ids'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 3
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:92:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 4
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_association.rb:111:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 5
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_proxy.rb:140:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 7
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:403:in
                       `block in make_lambda'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 8
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:183:in
                       `block (2 levels) in halting_and_conditional'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 9
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:34:in
                       `block (2 levels) in <module:Callbacks>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 10
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:184:in
                       `block in halting_and_conditional'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 11
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `block in invoke_before'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 12
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 13
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `invoke_before'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 14
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in
                       `run_callbacks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 15
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 16
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 17
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in
                       `block in process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 18
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `block in instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 19
                     trace: activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in
                       `instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 20
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 21
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 22
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 23
                     trace: activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 24
                     trace: actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in
                       `process'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 25
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 26
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 27
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 28
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 29
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:21:in
                       `block in <class:Constraints>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 30
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:51:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 31
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in
                       `block in serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 32
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in
                       `block in find_routes'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 33
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 34
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `find_routes'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 35
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 36
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 37
                     trace: roda (3.80.0) lib/roda/plugins/middleware.rb:164:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 38
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:18:in
                       `block in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 39
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `catch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 40
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 41
                     trace: rack (3.0.11) lib/rack/etag.rb:29:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 42
                     trace: rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 43
                     trace: rack (3.0.11) lib/rack/head.rb:15:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 44
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in
                       `block in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 45
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in
                       `run_callbacks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 46
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 47
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 48
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 49
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 50
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 51
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block
                       in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 52
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `block in tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 53
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in
                       `tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 54
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 55
                     trace: activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in
                       `method_missing'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 56
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 57
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 58
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 59
                     trace: rack (3.0.11) lib/rack/runtime.rb:24:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 60
                     trace: activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 61
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 62
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 63
                     trace: rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 64
                     trace: rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 65
                     trace: railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 66
                     trace: rack-test (2.1.0) lib/rack/test.rb:360:in `process_request'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 67
                     trace: rack-test (2.1.0) lib/rack/test.rb:153:in `request'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 68
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:288:in
                       `process'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 69
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:40:in
                       `delete'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 70
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:379:in
                       `delete'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 71
                     trace: spec/requests/api/v1/logs_spec.rb:70:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 72
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block (2 levels) in let'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 73
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (3 levels) in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 74
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `fetch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 75
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (2 levels) in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 76
                     trace: rspec-support (3.13.1) lib/rspec/support/reentrant_mutex.rb:25:in
                       `synchronize'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 77
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:178:in
                       `block in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 78
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 79
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 80
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block in let'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 81
                     trace: spec/requests/api/v1/logs_spec.rb:72:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 82
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 83
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 84
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:365:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 85
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:529:in `block
                       in run_owned_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 86
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 87
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 88
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:615:in `block
                       in run_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 89
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `reverse_each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 90
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 91
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:484:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 92
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:505:in `run_before_example'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 93
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:261:in `block
                       in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 94
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `block
                       in with_around_and_singleton_context_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 95
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `block
                       in with_around_example_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 96
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `block
                       in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 97
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:626:in `block
                       in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 98
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 99
                     trace: rspec-rails (6.1.2) lib/rspec/rails/adapters.rb:75:in `block
                       (2 levels) in <module:MinitestLifecycleAdapter>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 100
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 101
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 102
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 103
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 104
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 105
-                    trace: spec/rails_helper.rb:78:in `block (3 levels) in <top (required)>'
-                  - exception_object_id: 28220
+                    trace: spec/rails_helper.rb:79:in `block (3 levels) in <top (required)>'
+                  - exception_object_id: 28300
                     id: 106
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/strategy.rb:30:in
                       `cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 107
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 108
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:34:in
                       `block (2 levels) in cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 109
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:35:in
                       `cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 110
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 111
-                    trace: spec/rails_helper.rb:77:in `block (2 levels) in <top (required)>'
-                  - exception_object_id: 28220
+                    trace: spec/rails_helper.rb:78:in `block (2 levels) in <top (required)>'
+                  - exception_object_id: 28300
                     id: 112
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 113
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 114
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 115
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 116
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 117
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 118
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 119
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `with_around_example_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 120
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 121
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:259:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 122
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:646:in
                       `block in run_examples'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 123
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 124
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `run_examples'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 125
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:607:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 126
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 127
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 128
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 129
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 130
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 131
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 132
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 133
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 134
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 135
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (3 levels) in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 136
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 137
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (2 levels) in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 138
                     trace: rspec-core (3.13.0) lib/rspec/core/configuration.rb:2091:in
                       `with_suite_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 139
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:116:in `block
                       in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 140
                     trace: rspec-core (3.13.0) lib/rspec/core/reporter.rb:74:in `report'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 141
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:115:in `run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 142
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:89:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 143
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:71:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 144
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:45:in `invoke'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 145
                     trace: rspec-core (3.13.0) exe/rspec:4:in `<top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 146
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 147
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `<top
                       (required)>'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 148
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 149
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `kernel_load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 150
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:23:in
                       `run'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 151
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:451:in
                       `exec'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 152
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in
                       `run'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 153
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in
                       `invoke_command'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 154
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in
                       `dispatch'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 155
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:34:in
                       `dispatch'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 156
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in
                       `start'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 157
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:28:in
                       `start'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 158
                     trace: bundler (2.5.6) exe/bundle:28:in `block in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 159
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/friendly_errors.rb:117:in
                       `with_friendly_errors'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 160
                     trace: bundler (2.5.6) exe/bundle:20:in `<top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 161
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 162
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `<main>'"
                   Full Trace:
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 0
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:416:in
                       `raise_record_not_found_exception!'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 1
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:522:in
                       `find_one'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 2
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:499:in
                       `find_with_ids'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 3
                     trace: activerecord (7.1.3.2) lib/active_record/relation/finder_methods.rb:92:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 4
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_association.rb:111:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 5
                     trace: activerecord (7.1.3.2) lib/active_record/associations/collection_proxy.rb:140:in
                       `find'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 6
                     trace: app/controllers/api/v1/logs_controller.rb:67:in `set_log'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 7
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:403:in
                       `block in make_lambda'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 8
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:183:in
                       `block (2 levels) in halting_and_conditional'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 9
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:34:in
                       `block (2 levels) in <module:Callbacks>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 10
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:184:in
                       `block in halting_and_conditional'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 11
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `block in invoke_before'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 12
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 13
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in
                       `invoke_before'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 14
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in
                       `run_callbacks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 15
                     trace: actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 16
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 17
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in
                       `block in process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 18
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `block in instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 19
                     trace: activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in
                       `instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 20
                     trace: activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in
                       `instrument'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 21
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 22
                     trace: actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 23
                     trace: activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in
                       `process_action'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 24
                     trace: actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in
                       `process'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 25
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 26
                     trace: actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 27
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in
                       `dispatch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 28
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 29
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:21:in
                       `block in <class:Constraints>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 30
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:51:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 31
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in
                       `block in serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 32
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in
                       `block in find_routes'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 33
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 34
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in
                       `find_routes'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 35
                     trace: actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in
                       `serve'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 36
                     trace: actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 37
                     trace: roda (3.80.0) lib/roda/plugins/middleware.rb:164:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 38
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:18:in
                       `block in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 39
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `catch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 40
                     trace: rodauth-rails (1.14.1) lib/rodauth/rails/middleware.rb:17:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 41
                     trace: rack (3.0.11) lib/rack/etag.rb:29:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 42
                     trace: rack (3.0.11) lib/rack/conditional_get.rb:43:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 43
                     trace: rack (3.0.11) lib/rack/head.rb:15:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 44
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in
                       `block in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 45
                     trace: activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in
                       `run_callbacks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 46
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 47
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 48
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 49
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 50
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 51
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block
                       in call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 52
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `block in tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 53
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in
                       `tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 54
                     trace: activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in
                       `tagged'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 55
                     trace: activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in
                       `method_missing'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 56
                     trace: railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 57
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 58
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 59
                     trace: rack (3.0.11) lib/rack/runtime.rb:24:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 60
                     trace: activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 61
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 62
                     trace: actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in
                       `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 63
                     trace: rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 64
                     trace: rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 65
                     trace: railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 66
                     trace: rack-test (2.1.0) lib/rack/test.rb:360:in `process_request'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 67
                     trace: rack-test (2.1.0) lib/rack/test.rb:153:in `request'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 68
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:288:in
                       `process'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 69
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:40:in
                       `delete'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 70
                     trace: actionpack (7.1.3.2) lib/action_dispatch/testing/integration.rb:379:in
                       `delete'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 71
                     trace: spec/requests/api/v1/logs_spec.rb:70:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 72
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block (2 levels) in let'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 73
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (3 levels) in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 74
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `fetch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 75
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:179:in
                       `block (2 levels) in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 76
                     trace: rspec-support (3.13.1) lib/rspec/support/reentrant_mutex.rb:25:in
                       `synchronize'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 77
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:178:in
                       `block in fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 78
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 79
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:177:in
                       `fetch_or_store'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 80
                     trace: rspec-core (3.13.0) lib/rspec/core/memoized_helpers.rb:343:in
                       `block in let'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 81
                     trace: spec/requests/api/v1/logs_spec.rb:72:in `block (3 levels)
                       in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 82
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 83
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 84
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:365:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 85
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:529:in `block
                       in run_owned_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 86
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 87
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 88
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:615:in `block
                       in run_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 89
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `reverse_each'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 90
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 91
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:484:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 92
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:505:in `run_before_example'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 93
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:261:in `block
                       in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 94
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `block
                       in with_around_and_singleton_context_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 95
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `block
                       in with_around_example_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 96
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `block
                       in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 97
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:626:in `block
                       in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 98
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 99
                     trace: rspec-rails (6.1.2) lib/rspec/rails/adapters.rb:75:in `block
                       (2 levels) in <module:MinitestLifecycleAdapter>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 100
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 101
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 102
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 103
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 104
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 105
-                    trace: spec/rails_helper.rb:78:in `block (3 levels) in <top (required)>'
-                  - exception_object_id: 28220
+                    trace: spec/rails_helper.rb:79:in `block (3 levels) in <top (required)>'
+                  - exception_object_id: 28300
                     id: 106
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/strategy.rb:30:in
                       `cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 107
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 108
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:34:in
                       `block (2 levels) in cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 109
                     trace: database_cleaner-core (2.0.1) lib/database_cleaner/cleaners.rb:35:in
                       `cleaning'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 110
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/3.3.0/forwardable.rb:240:in
                       `cleaning'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 111
-                    trace: spec/rails_helper.rb:77:in `block (2 levels) in <top (required)>'
-                  - exception_object_id: 28220
+                    trace: spec/rails_helper.rb:78:in `block (2 levels) in <top (required)>'
+                  - exception_object_id: 28300
                     id: 112
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 113
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:457:in `instance_exec'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 114
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:390:in `execute_with'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 115
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:628:in `block
                       (2 levels) in run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 116
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:352:in `call'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 117
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 118
                     trace: rspec-core (3.13.0) lib/rspec/core/hooks.rb:486:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 119
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:468:in `with_around_example_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 120
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 121
                     trace: rspec-core (3.13.0) lib/rspec/core/example.rb:259:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 122
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:646:in
                       `block in run_examples'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 123
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 124
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:642:in
                       `run_examples'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 125
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:607:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 126
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 127
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 128
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 129
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 130
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 131
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 132
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `block in run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 133
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 134
                     trace: rspec-core (3.13.0) lib/rspec/core/example_group.rb:608:in
                       `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 135
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (3 levels) in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 136
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `map'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 137
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:121:in `block
                       (2 levels) in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 138
                     trace: rspec-core (3.13.0) lib/rspec/core/configuration.rb:2091:in
                       `with_suite_hooks'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 139
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:116:in `block
                       in run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 140
                     trace: rspec-core (3.13.0) lib/rspec/core/reporter.rb:74:in `report'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 141
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:115:in `run_specs'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 142
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:89:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 143
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:71:in `run'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 144
                     trace: rspec-core (3.13.0) lib/rspec/core/runner.rb:45:in `invoke'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 145
                     trace: rspec-core (3.13.0) exe/rspec:4:in `<top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 146
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 147
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/rspec:25:in `<top
                       (required)>'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 148
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 149
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:58:in
                       `kernel_load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 150
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli/exec.rb:23:in
                       `run'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 151
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:451:in
                       `exec'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 152
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in
                       `run'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 153
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in
                       `invoke_command'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 154
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in
                       `dispatch'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 155
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:34:in
                       `dispatch'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 156
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in
                       `start'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 157
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/cli.rb:28:in
                       `start'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 158
                     trace: bundler (2.5.6) exe/bundle:28:in `block in <top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 159
                     trace: "/home/binil/.rbenv/versions/3.3.0/lib/ruby/site_ruby/3.3.0/bundler/friendly_errors.rb:117:in
                       `with_friendly_errors'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 160
                     trace: bundler (2.5.6) exe/bundle:20:in `<top (required)>'
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 161
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `load'"
-                  - exception_object_id: 28220
+                  - exception_object_id: 28300
                     id: 162
                     trace: "/home/binil/.rbenv/versions/3.3.0/bin/bundle:25:in `<main>'"
     get:
@@ -3328,7 +3328,7 @@ paths:
         example: 1
       responses:
         '200':
-          description: is expected to eq 344
+          description: is expected to eq 211
           content:
             application/json:
               schema:
@@ -3367,15 +3367,15 @@ paths:
                 - updated_at
               example:
                 id: 1
-                session: afternoon
-                value: 344
-                remark: Adipisci perspiciatis qui quam.
+                session: fasting
+                value: 211
+                remark: Quasi consequatur quam neque.
                 tag: default
                 result: high
                 dose_id: 1
                 user_id: 1
-                created_at: '2014-11-02T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.877Z'
+                created_at: '2014-12-21T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.621Z'
     patch:
       summary: update
       tags:
@@ -3413,15 +3413,15 @@ paths:
               - created_at
               - value
             example:
-              remark: Dolore veritatis voluptatem et.
-              result: normal
-              session: evening
-              tag: bookmark
-              created_at: '2014-11-19'
-              value: 824
+              remark: Doloribus repellendus rerum impedit.
+              result: high
+              session: immediate
+              tag: default
+              created_at: '2014-10-22'
+              value: 515
       responses:
         '200':
-          description: is expected to eq "evening"
+          description: is expected to eq "immediate"
           content:
             application/json:
               schema:
@@ -3460,15 +3460,15 @@ paths:
                 - updated_at
               example:
                 user_id: 1
-                value: 824
-                session: evening
-                tag: bookmark
-                remark: Dolore veritatis voluptatem et.
+                value: 515
+                session: immediate
+                tag: default
+                remark: Doloribus repellendus rerum impedit.
                 id: 1
                 result: high
                 dose_id: 1
-                created_at: '2014-11-09T00:00:00.000Z'
-                updated_at: '2024-06-05T05:03:01.995Z'
+                created_at: '2014-09-23T00:00:00.000Z'
+                updated_at: '2024-06-05T05:45:02.752Z'
         '422':
           description: is expected to eq 422
           content:
@@ -3486,7 +3486,7 @@ paths:
       - Api::V1::Profile
       responses:
         '200':
-          description: is expected to eq "michal_dooley@lubowitz.example"
+          description: is expected to eq "maxwell@tromp.example"
           content:
             application/json:
               schema:
@@ -3529,13 +3529,13 @@ paths:
                 user:
                   id: 1
                   status: verified
-                  email: michal_dooley@lubowitz.example
-                  password_hash: "$2a$04$RNCKg6kAyf9aXMCUkrt4lur6jikO29cwgBKZRZUlcPnAw5nH8G2RK"
-                  name: Ramon Hodkiewicz
-                  dob: '2006-06-06'
-                  category: two
-                  gender: male
-                  ulid: 01HZKCEX74V0B1EFBSG5SM94C4
+                  email: maxwell@tromp.example
+                  password_hash: "$2a$04$3NQI9i5fowb6MHCAnnHLceL23RFc27zx6ehcUehgMgfURBt6K5fim"
+                  name: Raina Hudson
+                  dob: '2008-01-19'
+                  category: one
+                  gender: other
+                  ulid: 01HZKEVTWECNV0PDNJEAJ7MDJ0
   "/api/v1/profile/active_dose":
     get:
       summary: active_dose
@@ -3586,12 +3586,12 @@ paths:
               example:
                 id: 1
                 user_id: 1
-                morning: 4
-                afternoon: 5
-                evening: 5
-                night: 49
-                medicine: Eveniet ipsum eaque sed.
-                remarks: Asperiores explicabo id voluptatem.
+                morning: 30
+                afternoon: 20
+                evening: 33
+                night: 23
+                medicine: Sequi et pariatur ipsam.
+                remarks: Nulla commodi nisi veritatis.
                 status: active
-                created_at: '2024-06-05T05:03:02.402Z'
-                updated_at: '2024-06-05T05:03:02.402Z'
+                created_at: '2024-06-05T05:45:03.144Z'
+                updated_at: '2024-06-05T05:45:03.144Z'
