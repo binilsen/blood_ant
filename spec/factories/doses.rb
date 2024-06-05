@@ -7,6 +7,7 @@
 #  id         :integer          not null, primary key
 #  afternoon  :integer          default(0)
 #  evening    :integer          default(0)
+#  late_night :integer          default(0)
 #  medicine   :string
 #  morning    :integer          default(0)
 #  night      :integer          default(0)
@@ -27,6 +28,7 @@ FactoryBot.define do
     medicine { Faker::Lorem.sentence }
     morning { Faker::Number.between(from: 4, to: 50) }
     night { Faker::Number.between(from: 4, to: 50) }
+    late_night { Faker::Number.between(from: 4, to: 50) }
     remarks { Faker::Lorem.sentence }
     status { Dose.statuses.keys.sample }
     user

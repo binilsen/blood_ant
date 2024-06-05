@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 20_240_529_120_908) do
     t.integer 'afternoon', default: 0
     t.integer 'evening', default: 0
     t.integer 'night', default: 0
+    t.integer 'late_night', default: 0
     t.string 'medicine'
     t.string 'remarks'
     t.integer 'status', default: 0
