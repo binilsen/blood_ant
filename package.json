@@ -1,0 +1,20 @@
+{
+  "name": "blood_ant_app",
+  "description": "Introducing our innovative blood sugar level tracking app, designed to empower individuals managing diabetes to take control of their health with ease and precision. Whether you're newly diagnosed or a seasoned veteran in your diabetes management journey, our app provides the tools and insights you need to monitor and understand your blood glucose levels effortlessly.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "doc": "npx @redocly/cli build-docs docs/openapi.yaml --output=docs/index.html "
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.14.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

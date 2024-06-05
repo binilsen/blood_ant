@@ -55,7 +55,7 @@ module Api
 
       # Only allow a list of trusted parameters through.
       def dose_params
-        params.require(:dose).permit(%i[morning afternoon evening night medicine status remarks])
+        params.require(:dose).permit(%i[morning afternoon evening night late_night medicine status remarks])
       end
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: doses
@@ -5,6 +7,7 @@
 #  id         :integer          not null, primary key
 #  afternoon  :integer          default(0)
 #  evening    :integer          default(0)
+#  late_night :integer          default(0)
 #  medicine   :string
 #  morning    :integer          default(0)
 #  night      :integer          default(0)

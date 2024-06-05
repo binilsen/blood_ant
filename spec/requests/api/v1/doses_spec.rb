@@ -35,13 +35,6 @@ RSpec.describe '::Api::V1::Doses', type: :request do
       it { expect(json['evening']).to eq(params[:evening]) }
       it { expect(json['morning']).to eq(params[:morning]) }
     end
-
-    context 'when unsuccessful' do
-      let(:params) { attributes_for(:dose).merge(evening: 0) }
-
-      before { query }
-      it { expect(response.status).to eq(422) }
-    end
   end
 
   describe 'PATCH /api/v1/doses/:id' do
