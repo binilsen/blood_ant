@@ -25,15 +25,15 @@ class Log < ApplicationRecord
   belongs_to :user
   belongs_to :dose, optional: true
 
-  enum session: { immediate: 0, fasting: 1, morning: 2, afternoon: 3, evening: 4, night: 5,
-                  early: 6 }
+  enum session: { early: 0, fasting: 1, morning: 2, afternoon: 3, evening: 4, night: 5,
+                  immediate: 6 }
   enum tag: { default: 0, bookmark: 1 }
   enum result: { normal: 0, low: 1, high: 2 }
 
   validate :log_entry, unless: :immediate?
   validates :value, numericality: { greater_than: 50, less_than: 1000 }
 
-  scope :active, -> { where(created_at: Time.zone.today.all_day) }
+  scope :active, -> { where(created_at: Time.zone.today.all_day).order(:session) }
 
   before_create :enable_log_dose
 
